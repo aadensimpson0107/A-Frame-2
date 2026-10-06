@@ -22,7 +22,16 @@
                             <img id="treetrunk-base" src="assets\Bark_06_basecolor.jpg">
                             <img id="treetrunk-ambient-occlusion" src="assets\Bark_06_ambientOcclusion.jpg">
                             <img id="treetrunk-normal" src="assets\Bark_06_normal.jpg">
+                            <img id="sky" src="assets\valley.jpg">
                         </a-assets>
+                        <a-assets-item
+                        id="chair"
+                        src="assets\chair.glb">
+                    </a-assets-item>
+                    <a-assets-item
+                        id="lamp"
+                        src="assets\lamp.glb">
+                    </a-assets-item>
                         <a-plane 
                         material= "src: #grass-base; 
                         repeat: 500 500; 
@@ -34,8 +43,10 @@
                         height="500" 
                         >
                     </a-plane>
-                    <a-sky color="lightskyblue" > 
-                   </a-sky>
+                    <a-sky
+                    src="#sky">
+
+                    </a-sky>
                     <a-mixin
                         id="wallcolor"
                         color="lightsteelblue"
@@ -146,7 +157,10 @@ position="-3 2 -1">
 mixin="sphericaltreeleaves"
 position="8 2 -6">
 </a-sphere>
-
+<a-entity
+gltf-model="#chair"position="-1.0 0 -10"rotation="0 45 0"scale="0.1 0.1 0.1">
+</a-entity>
+<a-entity   gltf-model="#lamp"position="1.0 0 -10"scale="0.225 0.225 0.225"></a-entity>
             </a-scene>
             </body>
     </html>
